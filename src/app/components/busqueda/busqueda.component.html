@@ -1,0 +1,9 @@
+<div class="form-group mt-2">
+    <input class="form-control-file" type="text" name="buscar" (keyup)="buscar()" [(ngModel)]="busqueda">
+</div>
+<div class="vacio" *ngIf="busqueda == ''">
+    <h4>Busqueda vacía</h4>
+</div>
+<div class="card-columns">
+    <app-card [peli]="pelicula" *ngFor="let pelicula of peliculas" ></app-card>
+</div>

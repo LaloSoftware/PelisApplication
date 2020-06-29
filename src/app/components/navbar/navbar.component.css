@@ -1,0 +1,9 @@
+header{
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    /*top: 0;*/
+}
+li{
+    cursor: pointer;
+}

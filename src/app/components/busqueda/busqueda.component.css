@@ -1,0 +1,9 @@
+.vacio{
+    display: flex;
+    align-content: center;
+    color: gray;
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
