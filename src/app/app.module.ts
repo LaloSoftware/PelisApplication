@@ -11,8 +11,6 @@ import { PopularesComponent } from './components/populares/populares.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { CardComponent } from './components/card/card.component';
-import { AboutComponent } from './components/about/about.component';
-import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -22,7 +20,6 @@ import { from } from 'rxjs';
     PeliculaComponent,
     BusquedaComponent,
     CardComponent,
-    AboutComponent,
     NoimagePipe
   ],
   imports: [

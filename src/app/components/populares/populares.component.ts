@@ -9,18 +9,13 @@ import { PeliculasService } from '../../services/peliculas.service'
 export class PopularesComponent implements OnInit {
   taquilla = [];
   peliculas = [];
-  paraNinos = [];
   constructor( private _peliculas: PeliculasService ) {
-    this._peliculas.getCartelera().subscribe(
+    this._peliculas.getTendencias().subscribe(
       res => this.taquilla = res.results,
       err => console.log(err)
     );
     this._peliculas.getPopulares().subscribe(
       res => this.peliculas = res.results,
-      err => console.log(err)
-    );
-    this._peliculas.getPopularesNinos().subscribe(
-      res => this.paraNinos = res.results,
       err => console.log(err)
     );
    }

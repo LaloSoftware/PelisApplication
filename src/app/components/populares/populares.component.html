@@ -1,9 +1,14 @@
+<div class="alert alert-dark" role="alert">
+  <h2>PelisApplication</h2>
+  <p>Aplicación para ver información de películas</p>
+</div>
+
 <div class="accordion" id="accordionExample">
     <div class="card">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0">
           <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            En cartelera
+            Tendencias
           </button>
         </h2>
       </div>
@@ -29,20 +34,6 @@
             <div class="card-columns">
                 <app-card [peli]="pelicula" *ngFor="let pelicula of peliculas"></app-card>
             </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            lo más popular para los niños
-          </button>
-        </h2>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        <div class="card-body">
-          <app-card [peli]="peliParaNino" *ngFor="let peliParaNino of paraNinos"></app-card>
         </div>
       </div>
     </div>

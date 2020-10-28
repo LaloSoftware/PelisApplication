@@ -2,7 +2,7 @@
     <img [src]="imagen | noimage" class="card-img-top" alt="300">
     <div class="card-body">
       <h5 class="card-title"> {{ peli["title"] }} </h5>
-      <p class="card-text"> {{ peli["overview"] }} </p>
-      <a class="btn btn-primary">Conocer más</a>
+      <p class="card-text"> {{ peli["overview"] | slice:0:150}}...</p>
+      <a class="btn btn-primary" (click)="verMasDePelicula(peli.id)">Conocer más</a>
     </div>
 </div>

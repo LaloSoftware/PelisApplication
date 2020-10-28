@@ -11,13 +11,10 @@
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="busqueda">Buscar</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="info">Acerca de</a>
-        </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="form-inline my-2 my-lg-0" (ngSubmit)="buscarPelicula(busqueda.value)">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" #busqueda>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
       </form>
     </div>
   </nav>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { PeliculasService } from 'src/app/services/peliculas.service';
 
 @Component({
@@ -10,7 +11,17 @@ export class BusquedaComponent implements OnInit {
   busqueda: string = "";
   peliculas: any;
 
-  constructor( private _peliculas: PeliculasService ) { }
+  constructor(private _peliculas: PeliculasService,
+              private activatedRoute: ActivatedRoute ) {
+    this.activatedRoute.params.subscribe(
+      params => {
+        if(params['text']){
+          this.busqueda = params['text'];
+          this.buscar();
+        }
+      }
+    );
+  }
 
   ngOnInit(): void {
   }

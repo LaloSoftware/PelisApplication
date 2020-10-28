@@ -3,14 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { PopularesComponent } from './components/populares/populares.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
-import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
   { path: 'home', component: PopularesComponent },
-  { path: "peliculas/:id", component: PeliculaComponent },
+  { path: "peliculas/:id/:pag", component: PeliculaComponent },
   { path: "busqueda", component: BusquedaComponent },
-  { path: "info", component: AboutComponent },
+  { path: "busqueda/:text", component: BusquedaComponent },
   { path: "**", pathMatch: 'full', redirectTo: 'home' }
 ];
 

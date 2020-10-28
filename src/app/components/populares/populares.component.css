@@ -1,3 +1,7 @@
 .card-columns{
-    margin: 2rem;
+    margin: 15px 15px;
+}
+
+.alert{
+    padding: 15px 15px;
 }
